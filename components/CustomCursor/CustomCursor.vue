@@ -18,8 +18,8 @@ export default {
             links = document.getElementsByTagName('a'),
             inputs = document.getElementsByTagName('input'),
             labels = document.getElementsByTagName('label'),
-            circle = document.querySelector('.delivery-circle'),
-            allTriggers = [...links, ...inputs, ...labels];
+            burger = document.querySelector('.menu-btn'),
+            allTriggers = [...links, ...inputs, ...labels, burger];
 
         let mouseX = 0,
             mouseY = 0,
@@ -66,28 +66,18 @@ export default {
             aura.classList.add('hidden');
         });
 
-        allTriggers.forEach((trigger) => {
+        allTriggers.forEach(trigger => {
             trigger.addEventListener('mouseover', () => {
                 cursor.classList.add('active');
                 aura.classList.add('active');
             })
         })
 
-        allTriggers.forEach((trigger) => {
+        allTriggers.forEach(trigger => {
             trigger.addEventListener('mouseout', () => {
                 cursor.classList.remove('active');
                 aura.classList.remove('active');
             })
-        })
-
-        circle.addEventListener('mouseover', () => {
-            cursor.classList.add('active');
-            aura.classList.add('active');
-        })
-
-        circle.addEventListener('mouseout', () => {
-            cursor.classList.add('active');
-            aura.classList.add('active');
         })
     }
 }

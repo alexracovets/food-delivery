@@ -1,7 +1,7 @@
 <template>
     <div class="delivery-circle" id="DelCircle">
         <div class="circle-content">
-            Замовити доставку
+           <a href="###">Замовити доставку</a>
         </div>
     </div>
 </template>
@@ -20,7 +20,7 @@ export default {
                     trigger: item,
                     start: "left center",
                     toggleActions: 'play none none none',
-                    toggleClass: 'active',
+                    toggleClass: 'start',
                     once: true,
                 },
             });

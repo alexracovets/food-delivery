@@ -2,7 +2,7 @@
     <div class="menu-wrapper">
         <div class="menu">
             <div class="cross" @click="closer">
-                <a>
+                <a href="###">
                     <div class="cross-mark"></div>
                 </a>
             </div>

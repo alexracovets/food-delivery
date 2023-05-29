@@ -24,9 +24,21 @@
         transform: rotate(-15deg);
         animation: rotate cubic-bezier(.75, -1.27, .3, 2.33) 30s;
         animation-iteration-count: infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    &.active {
+    &.start {
         animation: scaleDecrease cubic-bezier(.75, -1.27, .3, 2.33) 400ms forwards;
 
         &.increase {

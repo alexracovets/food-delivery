@@ -1,6 +1,6 @@
 <template>
     <div class="deliverySwitch">
-        <input type="checkbox" id="deliverSwitcher" checked>
+        <input type="checkbox" checked>
         <label for="deliverSwitcher"></label>
     </div>
 </template>

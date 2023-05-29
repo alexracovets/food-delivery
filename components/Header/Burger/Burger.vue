@@ -10,7 +10,7 @@
 
 export default {
     name: 'Burger',
-    props:['opener']
+    props: ['opener']
 }
 </script>
 

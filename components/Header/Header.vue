@@ -2,11 +2,11 @@
     <header>
         <div class="header-wrapper">
             <Logo/>
-            <IsDeliver v-if="!mobileView"/>
-            <Navbar v-if="!mobileView"/>
-            <CallRequest v-if="!mobileView"/>
+            <IsDeliver v-show="!mobileView"/>
+            <Navbar v-show="!mobileView"/>
+            <CallRequest v-show="!mobileView"/>
             <Burger
-                v-if="mobileView"
+                v-show="mobileView"
                 :opener="switchBurger"
             />
             <FullMenu
@@ -29,7 +29,7 @@ export default {
     components: {Burger, CallRequest, Logo, IsDeliver, Navbar, FullMenu},
     data: () => {
         return {
-            mobileView: true,
+            mobileView: false,
             showNav: false
         }
     },

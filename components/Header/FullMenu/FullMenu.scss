@@ -21,126 +21,15 @@
         align-items: flex-start;
         flex-direction: column;
         padding: 2rem 1rem;
-        outline: 0.3rem solid rgb(90, 48, 240);
+        outline: 0.2rem solid rgba(90, 48, 240, .5);
 
         @media (max-width: 720px) {
             width: 100%;
         }
-
-        .cross {
-            position: relative;
-            width: 100%;
-            z-index: 12;
-
-            .cross-mark {
-                color: white;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 2.5rem;
-                height: 2.5rem;
-
-
-                &:before,
-                &:after {
-                    content: '';
-                    position: absolute;
-                    left: 1rem;
-                    top: 0;
-                    width: 0.25rem;
-                    height: 2.5rem;
-                    background-color: rgb(90, 48, 240);
-                    border-radius: 0.25rem;
-                    animation-fill-mode: forwards;
-                }
-
-                &:before {
-                    transform: rotate(45deg);
-                }
-
-                &:after {
-                    transform: rotate(-45deg);
-                }
-
-                &:hover {
-                    &:before {
-                        animation: crossAnimBefore ease-in-out 400ms;
-                    }
-
-                    &:after {
-                        animation: crossAnimAfter ease-in-out 400ms;
-                    }
-                }
-            }
-        }
-
-        .menu-links {
-            padding: 0;
-            color: rgb(90, 48, 240);
-            font-size: 2rem;
-            font-family: 'TTTravels', sans-serif;
-            font-weight: bold;
-            margin: 0;
-
-            li {
-                position: relative;
-                padding-left: 0;
-                transition: padding-left ease-in 300ms;
-
-                &:before {
-                    content: '-';
-                    position: absolute;
-                    font-family: sans-serif;
-                    left: -1rem;
-                    top: 0.8rem;
-                    opacity: 0;
-                    transition: all ease-in 300ms;
-                }
-
-                &:hover {
-                    padding-left: 1rem;
-                    transition: padding-left ease-in 300ms;
-
-                    &:before {
-                        left: 0;
-                        opacity: 1;
-                        transition: all ease-in 300ms;
-                    }
-                }
-
-                a {
-                    padding: 1rem 0;
-                    display: block;
-                }
-            }
-        }
     }
+
     &.open {
         transform: translateX(0);
         transition: all ease-in-out 400ms;
-    }
-}
-
-@keyframes crossAnimBefore {
-    0% {
-        transform: rotate(45deg);
-    }
-    50% {
-        transform: rotate(55deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes crossAnimAfter {
-    0% {
-        transform: rotate(-45deg);
-    }
-    50% {
-        transform: rotate(-55deg);
-    }
-    100% {
-        transform: rotate(-45deg);
     }
 }

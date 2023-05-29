@@ -1,7 +1,7 @@
 <template>
-    <div class="delivery-circle" id="DelCircle">
+    <div class="delivery-circle" id="DelCircle" cursor-target>
         <div class="circle-content">
-           <a href="###">Замовити доставку</a>
+            <a href="#">Замовити доставку</a>
         </div>
     </div>
 </template>

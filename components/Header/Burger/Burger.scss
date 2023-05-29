@@ -5,7 +5,6 @@
     z-index: 2;
     overflow: hidden;
     border-radius: 0.3125rem;
-    background-color: white;
 
     span {
         width: 1.875rem;
@@ -15,8 +14,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgb(90, 48, 240);
-        transition: all 0.5s;
+        outline: 0.1rem solid rgba(90, 48, 240, .5);
         border-radius: 0.25rem;
+        transition: all 0.5s;
 
         &:nth-of-type(2) {
             top: calc(50% - 0.625rem);

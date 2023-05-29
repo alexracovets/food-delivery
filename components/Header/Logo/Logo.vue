@@ -1,6 +1,6 @@
 <template>
     <div class="logo">
-      <a href="###">FoodDeliver</a>
+      <a href="#" cursor-target>FoodDeliver</a>
     </div>
 </template>
 

@@ -5,13 +5,8 @@
             <IsDeliver v-show="!mobileView"/>
             <Navbar v-show="!mobileView"/>
             <CallRequest v-show="!mobileView"/>
-            <Burger
-                v-show="mobileView"
-                :opener="switchBurger"
-            />
-            <FullMenu
-                :class="{'open': showNav}"
-                :closer="switchBurger"/>
+            <Burger v-show="mobileView" :opener="switchBurger"/>
+            <FullMenu :class="{'open': showNav}" :closer="switchBurger"/>
         </div>
     </header>
 </template>

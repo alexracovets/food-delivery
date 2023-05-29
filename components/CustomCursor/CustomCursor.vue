@@ -1,82 +1,91 @@
 <template>
-    <div class="cursor-wrapper">
+    <div class="cursor-wrapper" cursor-target>
         <div id="cursor" ref="cursor"></div>
         <div id="aura"></div>
     </div>
 </template>
 
 <script>
+
 import {gsap} from "gsap";
 
 export default {
     name: 'CustomCursor',
+    data: () => {
+        return {
+            mouseX: 0,
+            mouseY: 0,
+            posX: 0,
+            posY: 0
+        }
+    },
+    methods: {
+        mouseCoords(e) {
+            this.$data.mouseX = e.pageX;
+            this.$data.mouseY = e.pageY;
+        },
+        animLogic(aura, cursor) {
+
+            gsap.to(aura, .01, {
+                repeat: -1,
+                onRepeat: () => {
+                    this.$data.posX += (this.$data.mouseX - this.$data.posX) / 5;
+                    this.$data.posY += (this.$data.mouseY - this.$data.posY) / 5;
+                    gsap.set(cursor, {
+                        css: {
+                            left: this.$data.mouseX,
+                            top: this.$data.mouseY,
+                        }
+                    })
+
+                    gsap.set(aura, {
+                        css: {
+                            left: this.$data.posX - 24,
+                            top: this.$data.posY - 24,
+                        }
+                    })
+                }
+            });
+        },
+        removeClass(item, className) {
+            item.classList.remove(className);
+        },
+        addClass(item, className) {
+            item.classList.add(className);
+        }
+    },
     mounted() {
+
         const
             body = document.querySelector('body'),
             cursor = document.getElementById('cursor'),
             aura = document.getElementById('aura'),
-            links = document.getElementsByTagName('a'),
-            inputs = document.getElementsByTagName('input'),
-            labels = document.getElementsByTagName('label'),
-            burger = document.querySelector('.menu-btn'),
-            allTriggers = [...links, ...inputs, ...labels, burger];
+            targets = document.querySelectorAll('[cursor-target]');
 
-        let mouseX = 0,
-            mouseY = 0,
-            posX = 0,
-            posY = 0;
-
-        function mouseCoords(e) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        }
-
-
-        gsap.to({}, .01, {
-            repeat: -1,
-            onRepeat: () => {
-
-                posX += (mouseX - posX) / 5;
-                posY += (mouseY - posY) / 5;
-
-                gsap.set(cursor, {
-                    css: {
-                        left: mouseX,
-                        top: mouseY,
-                    }
-                })
-
-                gsap.set(aura, {
-                    css: {
-                        left: posX - 24,
-                        top: posY - 24,
-                    }
-                })
-            }
-        });
+        this.animLogic(aura, cursor);
 
         body.addEventListener('mousemove', e => {
-            mouseCoords(e);
-            cursor.classList.remove('hidden');
-            aura.classList.remove('hidden');
+            this.mouseCoords(e)
+            this.removeClass(cursor, 'hidden');
+            this.removeClass(aura, 'hidden');
         });
 
-        body.addEventListener('mouseout', e => {
-            cursor.classList.add('hidden');
-            aura.classList.add('hidden');
+        body.addEventListener('mouseout', () => {
+            this.addClass(cursor, 'hidden');
+            this.addClass(aura, 'hidden');
         });
 
-        allTriggers.forEach(trigger => {
+        targets.forEach(trigger => {
             trigger.addEventListener('mouseover', () => {
-                cursor.classList.add('active');
-                aura.classList.add('active');
+                this.addClass(cursor, 'active');
+                this.addClass(aura, 'active')
             })
         })
 
-        allTriggers.forEach(trigger => {
+        targets.forEach(trigger => {
             trigger.addEventListener('mouseout', () => {
-                cursor.classList.remove('active');
-                aura.classList.remove('active');
+                this.removeClass(cursor, 'active');
+                this.removeClass(aura, 'active');
             })
         })
     }

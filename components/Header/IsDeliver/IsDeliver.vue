@@ -1,5 +1,5 @@
 <template>
-    <div class="deliverySwitch">
+    <div class="deliverySwitch" cursor-target>
         <input type="checkbox" checked>
         <label for="deliverSwitcher"></label>
     </div>

@@ -1,11 +1,11 @@
 <template>
-    <div class="item">
+    <div class="item" cursor-target>
         <div class="front">
             <div class="item-title">
              {{benefit.title}}
             </div>
             <div class="item-img">
-                <img :src="benefit.img" />
+                <img :src="benefit.img" :alt="benefit.title" />
             </div>
         </div>
         <div class="back">
@@ -17,11 +17,7 @@
 <script>
 export default {
     name: 'Benefit',
-    props: {
-        benefit:{
-            type: Object,
-        }
-    },
+    props: ['benefit']
 };
 </script>
 

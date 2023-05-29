@@ -1,7 +1,7 @@
 <template>
     <div class="delivery-circle" id="DelCircle">
         <div class="circle-content">
-            <a>Замовити доставку</a>
+            Замовити доставку
         </div>
     </div>
 </template>
@@ -25,11 +25,11 @@ export default {
                 },
             });
 
-            item.addEventListener('mouseover',()=>{
+            item.addEventListener('mouseover', () => {
                 item.classList.add('increase');
             })
 
-            item.addEventListener('mouseout',()=>{
+            item.addEventListener('mouseout', () => {
                 item.classList.remove('increase');
             })
         }

@@ -1,0 +1,130 @@
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(-102%);
+  transition: all ease-in-out 400ms;
+}
+.menu-wrapper .menu {
+  position: relative;
+  z-index: 11;
+  width: 25rem;
+  height: 100vh;
+  background-color: #eee5de;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  outline: 0.3rem solid rgb(90, 48, 240);
+}
+@media (max-width: 720px) {
+  .menu-wrapper .menu {
+    width: 100%;
+  }
+}
+.menu-wrapper .menu .cross {
+  position: relative;
+  width: 100%;
+  z-index: 12;
+}
+.menu-wrapper .menu .cross .cross-mark {
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.menu-wrapper .menu .cross .cross-mark:before, .menu-wrapper .menu .cross .cross-mark:after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  width: 0.25rem;
+  height: 2.5rem;
+  background-color: rgb(90, 48, 240);
+  border-radius: 0.25rem;
+  animation-fill-mode: forwards;
+}
+.menu-wrapper .menu .cross .cross-mark:before {
+  transform: rotate(45deg);
+}
+.menu-wrapper .menu .cross .cross-mark:after {
+  transform: rotate(-45deg);
+}
+.menu-wrapper .menu .cross .cross-mark:hover:before {
+  animation: crossAnimBefore ease-in-out 400ms;
+}
+.menu-wrapper .menu .cross .cross-mark:hover:after {
+  animation: crossAnimAfter ease-in-out 400ms;
+}
+.menu-wrapper .menu .menu-links {
+  padding: 0;
+  color: rgb(90, 48, 240);
+  font-size: 2rem;
+  font-family: "TTTravels", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+.menu-wrapper .menu .menu-links li {
+  position: relative;
+  padding-left: 0;
+  transition: padding-left ease-in 300ms;
+}
+.menu-wrapper .menu .menu-links li:before {
+  content: "-";
+  position: absolute;
+  font-family: sans-serif;
+  left: -1rem;
+  top: 0.8rem;
+  opacity: 0;
+  transition: all ease-in 300ms;
+}
+.menu-wrapper .menu .menu-links li:hover {
+  padding-left: 1rem;
+  transition: padding-left ease-in 300ms;
+}
+.menu-wrapper .menu .menu-links li:hover:before {
+  left: 0;
+  opacity: 1;
+  transition: all ease-in 300ms;
+}
+.menu-wrapper .menu .menu-links li a {
+  padding: 1rem 0;
+  display: block;
+}
+.menu-wrapper.open {
+  transform: translateX(0);
+  transition: all ease-in-out 400ms;
+}
+
+@keyframes crossAnimBefore {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes crossAnimAfter {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-55deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+/*# sourceMappingURL=FullMenu.css.map */

@@ -1,0 +1,92 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "TTTravels", sans-serif;
+  max-width: 18.75rem;
+  padding: 1.25rem 3.125rem 1.5625rem 3.125rem;
+  position: relative;
+  background-color: rgb(243, 246, 251);
+  border-radius: 0.5rem;
+  transition: all ease-out 200ms;
+  opacity: 0;
+}
+@media (max-width: 1199px) {
+  .item {
+    max-width: 17.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .item {
+    max-width: 19rem;
+    margin: 2rem;
+  }
+}
+.item .front {
+  opacity: 1;
+  transition: opacity ease-in 300ms 0ms;
+}
+.item .front .item-title {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+  color: rgb(64, 64, 64);
+}
+.item .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 1.875rem;
+  opacity: 0;
+  transition: opacity ease-out 200ms;
+}
+.item:hover {
+  background-color: rgb(90, 48, 240);
+  transition: all ease-in 300ms;
+}
+.item:hover .front {
+  opacity: 0;
+  transition: opacity ease-out 200ms;
+}
+.item:hover .back {
+  opacity: 1;
+  transition: opacity ease-in 300ms;
+  transition-delay: 200ms;
+}
+.item.active {
+  transform: translateY(0);
+  transition: all ease-out 400ms;
+  animation: 400ms ease-out benefit;
+  animation-fill-mode: forwards;
+}
+.item:nth-of-type(1) {
+  animation-delay: 0ms;
+}
+.item:nth-of-type(2) {
+  animation-delay: 200ms;
+}
+.item:nth-of-type(3) {
+  animation-delay: 400ms;
+}
+.item:nth-of-type(4) {
+  animation-delay: 600ms;
+}
+
+@keyframes benefit {
+  0% {
+    transform: translateY(25rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=Benefit.css.map */

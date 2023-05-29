@@ -1,0 +1,63 @@
+.delivery-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.1875rem;
+  height: 12.1875rem;
+  position: fixed;
+  left: 50%;
+  top: calc(100vh - 0.625rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-color: rgb(90, 48, 240);
+  transform: translateY(-100%) translateX(-50%) scale(1);
+  z-index: 100;
+}
+.delivery-circle .circle-content {
+  font-size: 1.125rem;
+  line-height: 1.4625rem;
+  font-weight: 600;
+  font-family: "TTTravels", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-15deg);
+  animation: rotate cubic-bezier(0.75, -1.27, 0.3, 2.33) 30s;
+  animation-iteration-count: infinite;
+}
+.delivery-circle.active {
+  animation: scaleDecrease cubic-bezier(0.75, -1.27, 0.3, 2.33) 400ms forwards;
+}
+.delivery-circle.active.increase {
+  animation: scaleIncrease cubic-bezier(0.75, -1.27, 0.3, 2.33) 400ms forwards;
+}
+
+@keyframes scaleDecrease {
+  0% {
+    transform: translateY(-100%) translateX(-50%) scale(1);
+  }
+  100% {
+    transform: translateY(-70%) translateX(-50%) scale(0.9);
+  }
+}
+@keyframes scaleIncrease {
+  0% {
+    transform: translateY(-70%) translateX(-50%) scale(0.9);
+  }
+  100% {
+    transform: translateY(-100%) translateX(-50%) scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+/*# sourceMappingURL=DeliveryCircle.css.map */

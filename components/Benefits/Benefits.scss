@@ -1,0 +1,11 @@
+.benefit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 4.375rem 0;
+
+    @media (max-width: 991px) {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}

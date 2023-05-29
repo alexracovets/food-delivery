@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "TTTravels", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.0125rem;
+  padding: 0;
+  margin: 0 auto;
+  transform: translateX(-5.1rem);
+}
+@media (max-width: 1199px) {
+  .navigation {
+    transform: translateX(0);
+    margin: 0;
+  }
+}
+.navigation li a {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=Navbar.css.map */

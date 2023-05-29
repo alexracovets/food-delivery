@@ -1,0 +1,12 @@
+.logo{
+    font-size: 1.125rem;
+    font-family: 'Verdana', sans-serif;
+    font-weight: 700;
+    color: rgba(64, 64, 64, 1);
+    line-height: 1.4;
+    margin-right: 1.875rem;
+
+    @media (max-width: 991px) {
+       margin: 0;
+    }
+}

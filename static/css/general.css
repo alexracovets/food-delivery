@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "TTTravels";
+  src: url("../fonts/TTTravels-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("../fonts/TTTravels-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("../fonts/TTTravels-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("../fonts/TTTravels-DemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: url("../fonts/TTTravels-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../fonts/Verdana.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../fonts/Verdana-Bold.ttf");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html {
+  font-size: 1.11111vw;
+  background-color: white;
+}
+@media (max-width: 1199px) {
+  html {
+    font-size: 1.3vw;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 3.5vw;
+  }
+}
+@media (max-width: 420px) {
+  html {
+    font-size: 4.5vw;
+  }
+}
+
+.container {
+  max-width: 81.25rem;
+  padding: 0 0.625rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+.layout {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=general.css.map */

@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.deliverySwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.3125rem;
+  width: 13.0625rem;
+  border-radius: 3rem;
+  outline: 0.0625rem solid rgb(226, 232, 240);
+  background-color: white;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .deliverySwitch {
+    height: 3rem;
+    width: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.deliverySwitch input {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  appearance: none;
+  outline: none;
+  position: relative;
+  transition: all ease-in-out 250ms;
+  padding: 0.1875rem;
+}
+.deliverySwitch input::before, .deliverySwitch input::after {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  font-family: "TTTravels", sans-serif;
+  font-weight: 600;
+  width: 50%;
+  height: 100%;
+  color: rgb(99, 108, 129);
+  line-height: 2.8;
+}
+@media (max-width: 991px) {
+  .deliverySwitch input::before, .deliverySwitch input::after {
+    font-size: 1.4rem;
+    line-height: 2.1;
+  }
+}
+.deliverySwitch input::before {
+  content: "Доставка";
+  left: 0;
+  text-align: left;
+  padding-left: 1rem;
+}
+.deliverySwitch input::after {
+  content: "Самовивіз";
+  right: 0;
+  text-align: right;
+  padding-right: 1rem;
+}
+.deliverySwitch input:checked::before {
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out 250ms 100ms;
+}
+.deliverySwitch input:checked::after {
+  color: rgb(99, 108, 129);
+  transition: all ease-in-out 250ms 100ms;
+}
+.deliverySwitch input:not(:checked)::before {
+  color: rgb(99, 108, 129);
+  transition: all ease-in-out 250ms;
+}
+.deliverySwitch input:not(:checked)::after {
+  color: white;
+  transition: all ease-in-out 250ms;
+}
+.deliverySwitch input:checked + label {
+  left: 0.1875rem;
+  right: 50%;
+  background-color: rgb(90, 48, 240);
+  transition: right ease-in 250ms, left 150ms;
+}
+@media (max-width: 991px) {
+  .deliverySwitch input:checked + label {
+    left: 0;
+  }
+}
+.deliverySwitch input:not(:checked) + label {
+  left: 50%;
+  right: 0.1875rem;
+  background-color: rgb(90, 48, 240);
+  transition: left ease-in 250ms, right 150ms;
+}
+@media (max-width: 991px) {
+  .deliverySwitch input:not(:checked) + label {
+    right: 0;
+  }
+}
+.deliverySwitch label {
+  z-index: 1;
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+  border-radius: 3rem;
+  height: 1.9375rem;
+}
+@media (max-width: 991px) {
+  .deliverySwitch label {
+    top: 0;
+    height: 3rem;
+  }
+}
+
+/*# sourceMappingURL=IsDeliver.css.map */

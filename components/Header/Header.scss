@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    padding-left: 3.75rem;
+    padding-right: 1.875rem;
+
+    @media (max-width: 991px) {
+        padding: 0 2rem;
+    }
+
+    .header-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        @media (max-width: 1199px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 991px) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+

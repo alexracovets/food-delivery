@@ -1,0 +1,28 @@
+.menu-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 0.3125rem;
+  background-color: white;
+}
+.menu-btn span {
+  width: 1.875rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(90, 48, 240);
+  transition: all 0.5s;
+  border-radius: 0.25rem;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 0.625rem);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 0.625rem);
+}
+
+/*# sourceMappingURL=Burger.css.map */

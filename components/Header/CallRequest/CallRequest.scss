@@ -1,0 +1,32 @@
+.call_request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'TTTravels', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.0125rem;
+
+    @media (max-width: 991px) {
+        font-size: 1.7rem;
+        letter-spacing: 0;
+        color: rgb(90, 48, 240);
+    }
+
+    @media (max-width: 420px) {
+        font-size: 1.4rem;
+    }
+
+    .call-separator {
+        height: 0.875rem;
+        margin: 0 0.9375rem;
+        border: 0.09375rem solid rgba(64, 64, 64, 1);
+
+        @media (max-width: 991px) {
+            height: 1.3rem;
+            border: 0.12rem solid rgb(90, 48, 240);
+            margin: 0 0.7rem;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @media (max-width: 991px) {
+        flex-direction: column;
+    }
+
+    .main-left,
+    .main-right {
+        width: 50%;
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+
+    .main-left {
+        background-image: url("~@/static/img/main.jpg");
+        background-position: center right;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .main-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+            padding: 2rem;
+            box-shadow: 0.125rem -0.4375rem 0.5rem white;
+        }
+
+        @media (max-width: 678px) {
+            padding: 3rem 2rem;
+        }
+
+        @media (max-width: 420px) {
+            padding: 5rem 2rem;
+        }
+
+        @media (max-width: 340px) {
+            padding: 7rem 2rem;
+        }
+
+        h1,
+        .pre-title {
+            max-width: 25rem;
+
+            @media (max-width: 991px) {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        h1 {
+            font-size: 4.75rem;
+            font-family: 'TTTravels', sans-serif;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1.875rem;
+
+            @media (max-width: 720px) {
+                font-size: 3.5rem;
+                line-height: 1;
+            }
+        }
+
+        .pre-title {
+            font-size: 1.125rem;
+            font-family: 'TTTravels', sans-serif;
+            font-weight: 400;
+            line-height: 1.575;
+
+            @media (max-width: 720px) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
